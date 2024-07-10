@@ -1,6 +1,8 @@
 public class Triangle extends Shape{
-    private double side1, side2, side3;
+    private double side1, side2, side3; 
 
+
+//initalixe triangle
     public Triangle (double side1, double side2, double side3){
         super ("Triangle");
         if (isValidTriangle (side1,side2,side3)){
@@ -12,16 +14,18 @@ public class Triangle extends Shape{
         }
 
     }
-    
+    //validate that it is a triangle
     private boolean isValidTriangle(double side1, double side2, double side3){
         return (side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2);
     }
 
+        //calcalate and return perimeter
     @Override
     public double getPerimeter(){
         return side1 + side2 + side3;
     }
 
+    //calculate and return area
     @Override
     public double getArea(){
         double s = getPerimeter() / 2;
